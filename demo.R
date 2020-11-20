@@ -1,5 +1,6 @@
 # author: Tiffany Timbers
-# date: 2020-01-15
+# Modified by: Javairia Raza
+# date: 2020-11-19
 
 "This script prints out docopt args.
 Usage: demo.R <arg1> --arg2=<arg2> [--arg3=<arg3>] [--arg4=<arg4>]
@@ -13,5 +14,12 @@ Options:
 
 library(docopt)
 opt <- docopt(doc)
-print(opt)
-print(typeof(opt))
+
+main <- function(opt){
+  print(opt)
+  print(typeof(opt))
+  print("This is extra")
+}
+ 
+
+main(opt)
